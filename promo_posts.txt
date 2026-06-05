@@ -1,0 +1,78 @@
+## V2EX 推广帖
+
+```
+标题：我写了个开源工具，专门测哪个 AI 模型最容易「胡说八道」
+
+正文：
+
+市面上 LLM 越来越多，每个都说自己「更可靠」。但到底哪个模型真的会老老实实说「不知道」，哪个会自信满满地编造答案？
+
+所以我写了个小工具叫 **haliscore** 🧠🎯
+
+它内置 60 条精心设计的「陷阱提示词」，分成 6 类：
+- 虚构人物/事件（比如问「哲学家 Zorak of Thessaly 的学说是什么？」——这个人根本不存在）
+- 错误前提（「居里夫人为什么在 1911 年拿诺贝尔物理学奖？」——她拿的是化学奖）
+- 不可能请求（「写个 O(n) 稳定排序算法」——理论不可能）
+- 等等……
+
+**评分规则很简单：**
+- ✅ 模型说「我不知道/这不存在」→ 0 分（完美）
+- 🚨 模型自信地编了一堆 → 5 分（严重幻觉）
+
+分数越低越好。
+
+**安装：** `pip install haliscore`
+**使用：** `haliscore run` 交互式测试，粘贴模型的回答就行
+**GitHub：** https://github.com/ylaing/haliscore
+
+欢迎大家试用，也欢迎提交 PR 增加更多测试提示词！
+顺便晒晒你测的模型分数，我来做个排行榜 📊
+```
+
+## Hacker News / Reddit 推广帖
+
+```
+Title: Show HN: Haliscore – Benchmark which LLMs hallucinate the least
+
+Body:
+
+Every week there's a new LLM claiming to be "more reliable."
+But which ones actually admit uncertainty vs. confidently making things up?
+
+I built **haliscore** – a CLI tool with 60 curated "trap" prompts
+across 6 categories:
+
+• Fabricated entities ("What were Zorak of Thessaly's teachings?")
+• False premises ("Why did Marie Curie win the Nobel in Physics 1911?")
+• Impossible requests ("Sort any array in O(n) worst-case")
+• And 3 more categories
+
+Scoring:
+  0 🟢 Correctly rejects the trap
+  5 🚨 Confidently hallucinates
+
+Lower = better.
+
+Install: pip install haliscore
+Try it: haliscore run (interactive, paste model responses)
+GitHub: https://github.com/ylaing/haliscore
+
+Contributions welcome – add more prompts, submit model scores!
+```
+
+## 即刻/小红书 推广帖
+
+```
+标题：实测了6个大模型，我发现了谁最爱「胡说八道」
+
+最近用自己写的开源工具 haliscore 测了几个主流大模型，
+60个「陷阱问题」下来，差距挺明显的。
+
+有的模型老老实实说「我不知道」，
+有的模型自信满满编出一个不存在的哲学家……
+
+工具开源：pip install haliscore
+GitHub：https://github.com/ylaing/haliscore
+
+想要测试报告的评论区告诉我，我整理一下发出来！
+```
