@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haliscore"
+version = "0.1.0"
+description = "LLM Hallucination Test Suite — benchmark which models hallucinate the least"
+readme = "README.md"
+authors = [
+    {name = "ylaing", email = "ylaing@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["llm", "hallucination", "benchmark", "ai", "testing"]
+requires-python = ">=3.8"
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ylaing/haliscore"
+Repository = "https://github.com/ylaing/haliscore"
+BugTracker = "https://github.com/ylaing/haliscore/issues"
+
+[project.scripts]
+haliscore = "haliscore.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["haliscore*"]
